@@ -10,6 +10,7 @@ var express       = require("express"),
     passport      = require("passport"),
 	methodOverride= require("method-override"),
 	flash         = require("connect-flash"),
+	connect       = require("connect"),
 	SessionStore  = require("session-mongoose")(express)
 
 //Requiering routes
