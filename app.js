@@ -10,6 +10,7 @@ var express       = require("express"),
     passport      = require("passport"),
 	methodOverride= require("method-override"),
 	flash         = require("connect-flash")
+
 	
 
 //Requiering routes
@@ -62,11 +63,15 @@ app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
-app.listen(3000, () => {
-	console.log('server listening on port 3000');
-});
+// app.listen(3000, () => {
+// 	console.log('server listening on port 3000');
+// });
 
 
+var port = process.env.PORT || 8080;
+
+var server= app.listen(port,function() {
+console.log("app running on port 8080"); });
 
 
 
