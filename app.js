@@ -9,9 +9,8 @@ var express       = require("express"),
     User          = require("./models/user"),
     passport      = require("passport"),
 	methodOverride= require("method-override"),
-	flash         = require("connect-flash"),
-	connect       = require("connect"),
-	SessionStore  = require("session-mongoose")(express)
+	flash         = require("connect-flash")
+	
 
 //Requiering routes
 var commentRoutes     = require("./routes/comments"),
@@ -37,14 +36,10 @@ mongoose.connect('mongodb+srv://Hannahkay:thisisthenewpassword@cluster0-bmnzo.mo
 });
 
 //Passport configuration
-app.use(
-  express.session({
-    store: new SessionStore({
-    url: 'mongodb+srv://Hannahkay:thisisthenewpassword@cluster0-bmnzo.mongodb.net/test?retryWrites=true&w=majority',
-    interval: 1200000
-  }),
-  cookie: { maxAge: 1200000 },
-  secret: "Once again Rusty wins cutest dog!",
+app.use(require("express-session")({
+    secret: "Once again Rusty wins cutest dog!",
+    resave: false,
+    saveUninitialized: false
 }));
 
 
