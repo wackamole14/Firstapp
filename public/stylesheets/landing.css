@@ -2,15 +2,35 @@ body {
 	background-color: #000;
 }
 
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-<div style='position:relative; padding-bottom:calc(56.25% + 44px)'><iframe src='https://gfycat.com/ifr/FatalOldfashionedAoudad' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div><p> <a href="https://gfycat.com/fataloldfashionedaoudad-galaxy-cosmo-space">via Gfycat</a></p>
+#landing-header {
+	text-align: center;
+}
 
+#landing-header h1 {
+	color: #fff;
+}
+
+.header_img {
+	height: auto; 
+	max-width: 100%;
+}
+
+.btn {
+    background-color: white;
+	opacity: 0.6;
+	padding: .2em .5em;
+	margin-top: 1em;
+
+}
 
 .navbar navbar-default{
 	opacity:1;
 }
 
-/* Older browser support - .no-cssanimations class added by modernizr */
-.no-cssanimations .slideshow li {
-	opacity: 1;
-}
