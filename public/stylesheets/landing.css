@@ -11,6 +11,7 @@ body {
 
 #landing-header {
 	text-align: center;
+	margin-top:.5em;
 }
 
 #landing-header h1 {
@@ -22,12 +23,17 @@ body {
 	max-width: 100%;
 }
 
+.brownie {
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .btn {
     background-color: white;
 	opacity: 0.6;
 	padding: .2em .5em;
 	margin-top: 1em;
-
 }
 
 .navbar navbar-default{
