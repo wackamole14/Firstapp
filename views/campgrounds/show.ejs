@@ -1,6 +1,6 @@
 <% include ../partials/header %>
 
-
+<div class="container">
 		<div class="col-md-7">
 			<div class="thumbnail">
 				<img class="img-responsive" src="<%= campground.image %>">
@@ -9,6 +9,11 @@
 					<h4><a><%=campground.name%></a></h4>
 					    <h5> <%= campground.shdescription %></h5>
 					<p><%= campground.longdescription %></p>
+					<a class="btn btn-success pull-right" href="#">Buy Now</a>
+					
+					<p>
+					</p>
+					
 					<p>
 						<em>Created By <%= campground.author.username %></em>
 					</p>
@@ -46,7 +51,7 @@
 			<% }) %>
 		</div>
 	</div>
-
+	</div>
 
 	
 
