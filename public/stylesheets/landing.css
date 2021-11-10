@@ -57,9 +57,7 @@ body {
 }
 
 .slideshow li:nth-child(1) { 
-  background-image: /images/space_3.jpeg; 
-  animation-delay: 10s; 
-}
+  background-image: "/images/space_3.jpeg";
 }
 .slideshow li:nth-child(2) { 
   background-image: url(https://res.cloudinary.com/dpidferb5/image/upload/v1590332087/girl-1228514_1920_jgzvmh.jpg);
