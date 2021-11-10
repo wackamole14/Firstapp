@@ -6,7 +6,7 @@ var User = require("../models/user");
 //Root route
 
 router.get('/', function(req, res){
-	res.render("landing");
+	res.render("landing_copy0");
 });
 
 
