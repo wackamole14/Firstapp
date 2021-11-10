@@ -16,6 +16,23 @@ body {
   color: #fff;
 }
 
+
+#banner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+}
+	
+}
+
+
+
+
 .slideshow { 
   position: fixed;
   width: 100%;
