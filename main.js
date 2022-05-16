@@ -15,7 +15,7 @@ var express       = require("express"),
 
 //Requiering routes
 var commentRoutes     = require("./routes/comments"),
-    campgroundRoutes  = require("./routes/campgrounds"),
+    campgroundRoutes  = require("./routes/campgrounds"),node 
 	indexRoutes       = require("./routes/index")
 
 app.set("view engine", "ejs");
