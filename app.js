@@ -9,7 +9,9 @@ var express       = require("express"),
     User          = require("./models/user"),
     passport      = require("passport"),
 	methodOverride= require("method-override"),
-	flash         = require("connect-flash")
+	flash         = require("connect-flash"),
+    Analytics = require('analytics-node'),
+    analytics = new Analytics('0FiyK6qY4D8oqPcjhL8d0Ww2TEYLEy26')
 
 	
 
