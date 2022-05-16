@@ -2,6 +2,8 @@ var express = require("express");
 var router = express.Router();
 var passport = require("passport");
 var User = require("../models/user");
+var Analytics = require('analytics-node');
+var analytics = new Analytics('0FiyK6qY4D8oqPcjhL8d0Ww2TEYLEy26');
 
 //Root route
 
@@ -17,6 +19,25 @@ router.get("/register", function(req, res){
 });
 
 router.post("/register", function(req, res){
+	
+	analytics.identify({
+  		userId: req.body.username,
+  		traits: {
+    		name: user.username,
+    		email: user.email
+  		}
+	});
+	
+	analytics.track({
+  		userId: req.body.username,
+  		event: 'account created',
+  		properties: {
+    		revenue: 39.95,
+    		plan_type: 'basic_user'
+  			}
+	});	
+	
+	
 	var newUser= new User({username: req.body.username});	
 	User.register(newUser, req.body.password, function(err, user){
 		if(err){

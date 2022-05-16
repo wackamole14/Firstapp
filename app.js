@@ -10,14 +10,14 @@ var express       = require("express"),
     passport      = require("passport"),
 	methodOverride= require("method-override"),
 	flash         = require("connect-flash"),
-    Analytics = require('analytics-node'),
-    analytics = new Analytics('0FiyK6qY4D8oqPcjhL8d0Ww2TEYLEy26')
+    Analytics     = require('analytics-node'),
+    analytics     = new Analytics('0FiyK6qY4D8oqPcjhL8d0Ww2TEYLEy26')
 
 	
 
 //Requiering routes
 var commentRoutes     = require("./routes/comments"),
-    campgroundRoutes  = require("./routes/campgrounds"),node 
+    campgroundRoutes  = require("./routes/campgrounds"), 
 	indexRoutes       = require("./routes/index")
 
 app.set("view engine", "ejs");
@@ -25,8 +25,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
-//seedDB(); no longer active right now
-
+//seedDB(); no longer active right now 
 
 //connecting MongooseDB
 mongoose.connect('mongodb+srv://Hannahkay:thisisthenewpassword@cluster0-bmnzo.mongodb.net/test?retryWrites=true&w=majority', {
