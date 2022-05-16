@@ -16,8 +16,8 @@ router.get("/", function (req, res) {
 			path: '/',
 			title: 'landing page',
 			referrer: req.headers['referer']
-  }
-});
+  		}
+	});
 	
 	
     var perPage = 8;
