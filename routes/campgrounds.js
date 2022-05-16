@@ -3,8 +3,23 @@ var router         = express.Router();
 var Campground     = require("../models/campground");
 var middleware     = require("../middleware");
 
+
 // INDEX - show all campgrounds
 router.get("/", function (req, res) {
+	
+	
+	analytics.page({
+  		userId: req.body.username,
+  		category: 'landing',
+  		properties: {
+			url: 'https://holisticescapes-heroku-20.herokuapp.com/',
+			path: '/',
+			title: 'landing page',
+			referrer: req.headers['referer']
+  }
+});
+	
+	
     var perPage = 8;
     var pageQuery = parseInt(req.query.page);
     var pageNumber = pageQuery ? pageQuery : 1;
