@@ -4,10 +4,10 @@ body {
 
 #landing-header {
   z-index: 1;
-  font: 20px Arial, sans-serif;
+  font: 18px Arial, sans-serif;
   position: relative;
   text-align: center;
-  text-decoration-color: #fff;
+  text-decoration-color: #ffff;
 	
 }
 
@@ -18,6 +18,14 @@ body {
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
+}
+
+#sub {
+  color: #ffff;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 @-webkit-keyframes glow {
@@ -31,10 +39,10 @@ body {
 
 
 #banner {
-  width: 60%;
+  width: 10%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 0;
   margin: auto;
   padding: 0;
   display: block;
