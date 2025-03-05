@@ -30,7 +30,8 @@ app.use(flash());
 //connecting MongooseDB
 mongoose.connect('mongodb+srv://Hannahkay:thisisthenewpassword@cluster0-bmnzo.mongodb.net/test?retryWrites=true&w=majority', {
 	useNewUrlParser: true,
-	useCreateIndex: true
+	useCreateIndex: true,
+	useUnifiedTopology: true // Add this option to avoid another deprecation warning
 }).then(() => {
 	console.log('Connected to DB!');
 }).catch(err => {
