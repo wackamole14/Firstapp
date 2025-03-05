@@ -31,7 +31,8 @@ app.use(flash());
 mongoose.connect('mongodb+srv://Hannahkay:thisisthenewpassword@cluster0-bmnzo.mongodb.net/test?retryWrites=true&w=majority', {
 	useNewUrlParser: true,
 	useCreateIndex: true,
-	useUnifiedTopology: true // Add this option to avoid another deprecation warning
+	useUnifiedTopology: true, // Add this option to avoid another deprecation warning
+	useFindAndModify: false // Add this option to avoid deprecation warnings for findAndModify
 }).then(() => {
 	console.log('Connected to DB!');
 }).catch(err => {
@@ -40,7 +41,7 @@ mongoose.connect('mongodb+srv://Hannahkay:thisisthenewpassword@cluster0-bmnzo.mo
 
 //Passport configuration
 app.use(require("express-session")({
-    secret: "Once again Rusty wins cutest dog!",
+    secret: "myRealUniqueSecretArdillasRojas", // Changed this to a unique secret
     resave: false,
     saveUninitialized: false
 }));
